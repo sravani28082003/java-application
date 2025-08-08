@@ -1,4 +1,4 @@
-name: Build, Push and Deploy Java App 
+name: Build, Push 
 on:
   push:
     branches: [ main ]
