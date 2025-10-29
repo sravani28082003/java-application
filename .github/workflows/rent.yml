@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rental-app-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rental-app
+  template:
+    metadata:
+      labels:
+        app: rental-app
+    spec:
+      containers:
+      - name: rental-app-container
+        image: sravani28082003/rental-app:latest
+        ports:
+        - containerPort: 8080
